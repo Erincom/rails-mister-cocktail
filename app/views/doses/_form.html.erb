@@ -1,0 +1,13 @@
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+
+<div class="container">
+  <div class="row">
+  <div class="col-xs-4 col-xs-offset-4">
+      <%= f.input :description %>
+      <%= f.input :ingredient_id, collection: Ingredient.all  %>
+      <%= f.submit %>
+    </div>
+  </div>
+</div>
+
+<% end %>
